@@ -12,13 +12,14 @@ jobs:
     - name: Deploy to AWS EC2
       uses: appleboy/ssh-action@v0.1.5
       with:
-        host: 3.34.190.10
+        host: 43.201.205.65
         username: ubuntu
         key: ${{ secrets.AWS_SSH_KEY }}
         port: 22
         script: |
           cd /home/ubuntu/HorizonSeaweed
           git pull
-          npm install
+          npm install --production
           npm run build
-          pm2 restart horizonseaweed
+          pm2 reload horizonseaweed || pm2 start npm --name horizonseaweed -- start
+          pm2 save
