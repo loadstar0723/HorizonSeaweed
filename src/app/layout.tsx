@@ -24,7 +24,11 @@ export default function RootLayout({
     <html lang="ko" className="dark">
       <body className={`${inter.className} bg-dark-400 text-white overflow-x-hidden`}>
         <div className="particle-bg" />
-        {children}
+        <div className="min-h-screen flex flex-col">
+          <div className="flex-1 w-full max-w-[1920px] mx-auto">
+            {children}
+          </div>
+        </div>
       </body>
     </html>
   )
