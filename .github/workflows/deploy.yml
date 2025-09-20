@@ -18,16 +18,51 @@ jobs:
         port: 22
         script: |
           cd /home/ubuntu/HorizonSeaweed
+          
+          # Pull latest code
+          echo "Pulling latest code..."
           git pull origin master
-          npm install
+          
+          # Clear npm cache and reinstall
+          echo "Installing dependencies..."
+          npm ci --production=false
+          
+          # Remove old build
+          echo "Removing old build..."
+          rm -rf .next
+          
+          # Build the application
+          echo "Building application..."
           npm run build
-          if [ -d ".next" ]; then
-            echo "Build successful, restarting PM2..."
+          
+          # Verify build success
+          if [ -f ".next/BUILD_ID" ]; then
+            echo "Build successful (BUILD_ID: $(cat .next/BUILD_ID))"
+            
+            # Stop and remove old PM2 process
+            echo "Stopping old PM2 process..."
             pm2 stop horizonseaweed || true
             pm2 delete horizonseaweed || true
+            
+            # Start new PM2 process
+            echo "Starting new PM2 process..."
             pm2 start npm --name horizonseaweed -- start
             pm2 save
+            
+            # Wait for server to start
+            echo "Waiting for server to start..."
+            sleep 10
+            
+            # Check if server is running
+            if pm2 list | grep -q "horizonseaweed.*online"; then
+              echo "Server started successfully!"
+            else
+              echo "Server failed to start, checking logs..."
+              pm2 logs horizonseaweed --lines 20 --nostream
+              exit 1
+            fi
           else
-            echo "Build failed - .next directory not found"
+            echo "Build failed - BUILD_ID not found"
+            ls -la .next
             exit 1
           fi
