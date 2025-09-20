@@ -18,8 +18,16 @@ jobs:
         port: 22
         script: |
           cd /home/ubuntu/HorizonSeaweed
-          git pull
-          npm install --production
+          git pull origin master
+          npm install
           npm run build
-          pm2 reload horizonseaweed || pm2 start npm --name horizonseaweed -- start
-          pm2 save
+          if [ -d ".next" ]; then
+            echo "Build successful, restarting PM2..."
+            pm2 stop horizonseaweed || true
+            pm2 delete horizonseaweed || true
+            pm2 start npm --name horizonseaweed -- start
+            pm2 save
+          else
+            echo "Build failed - .next directory not found"
+            exit 1
+          fi
