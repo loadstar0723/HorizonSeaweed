@@ -155,7 +155,7 @@ export default function HomePage() {
       </AnimatePresence>
       
       {/* 히어로 섹션 */}
-      <section className="relative min-h-[67vh] flex items-center justify-center overflow-hidden pt-40 pb-12 md:pt-24 md:pb-12">
+      <section className="relative min-h-[75vh] md:min-h-[80vh] flex items-center justify-center overflow-hidden pt-40 pb-20 md:pt-32 md:pb-24">
         {/* 배경 애니메이션 */}
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-br from-dark-400 via-dark-300 to-primary-900/20" />
@@ -198,7 +198,7 @@ export default function HomePage() {
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               transition={{ type: "spring", duration: 1 }}
-              className="mb-12 md:mb-8 inline-block"
+              className="mb-12 md:mb-16 inline-block"
             >
               <div className="relative">
                 <motion.div
@@ -290,7 +290,7 @@ export default function HomePage() {
             </motion.div>
 
             {/* CTA 버튼 */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-20 md:mb-24">
               <motion.button
                 onClick={() => setSelectedVideo('/videos/smart-farming-main.mp4')}
                 whileHover={{ scale: 1.05 }}
@@ -319,7 +319,7 @@ export default function HomePage() {
         <motion.div
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 1.5, repeat: Infinity }}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+          className="absolute bottom-12 md:bottom-16 left-1/2 transform -translate-x-1/2"
         >
           <div className="w-6 h-10 border-2 border-primary-400 rounded-full flex justify-center">
             <div className="w-1 h-3 bg-primary-400 rounded-full mt-2" />
@@ -328,7 +328,7 @@ export default function HomePage() {
       </section>
 
       {/* 통계 섹션 */}
-      <section className="py-20 relative overflow-hidden">
+      <section className="pt-32 pb-20 md:pt-40 md:pb-20 relative overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
