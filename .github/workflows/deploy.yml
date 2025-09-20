@@ -19,17 +19,20 @@ jobs:
         script: |
           cd /home/ubuntu/HorizonSeaweed
           
-          # Pull latest code
+          # Pull latest code with force
           echo "Pulling latest code..."
+          git fetch --all
+          git reset --hard origin/master
           git pull origin master
           
           # Clear npm cache and reinstall
           echo "Installing dependencies..."
           npm ci --production=false
           
-          # Remove old build
-          echo "Removing old build..."
+          # Remove old build and cache
+          echo "Removing old build and cache..."
           rm -rf .next
+          rm -rf node_modules/.cache
           
           # Build the application
           echo "Building application..."
