@@ -155,7 +155,7 @@ export default function HomePage() {
       </AnimatePresence>
       
       {/* 히어로 섹션 */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 pb-24">
         {/* 배경 애니메이션 */}
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-br from-dark-400 via-dark-300 to-primary-900/20" />
@@ -193,30 +193,8 @@ export default function HomePage() {
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
-            {/* 로고 애니메이션 */}
-            <motion.div
-              initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
-              transition={{ type: "spring", duration: 1 }}
-              className="mb-12 md:mb-16 inline-block"
-            >
-              <div className="relative">
-                <motion.div
-                  animate={{ 
-                    rotate: 360,
-                  }}
-                  transition={{
-                    duration: 20,
-                    repeat: Infinity,
-                    ease: "linear"
-                  }}
-                  className="absolute inset-0 bg-gradient-to-r from-primary-500 to-cyan-500 rounded-full blur-xl opacity-50"
-                />
-                <Waves className="w-16 h-16 text-primary-400 relative z-10" />
-              </div>
-            </motion.div>
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 md:mb-12 mt-4">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 md:mb-12 mt-16 md:mt-24">
               <span className="gradient-text">Horizon</span>
               <span className="gradient-text-gold">Seaweed</span>
             </h1>
@@ -319,7 +297,7 @@ export default function HomePage() {
         <motion.div
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 1.5, repeat: Infinity }}
-          className="absolute bottom-12 md:bottom-16 left-1/2 transform -translate-x-1/2"
+          className="absolute bottom-20 left-1/2 transform -translate-x-1/2"
         >
           <div className="w-6 h-10 border-2 border-primary-400 rounded-full flex justify-center">
             <div className="w-1 h-3 bg-primary-400 rounded-full mt-2" />

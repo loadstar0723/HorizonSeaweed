@@ -260,8 +260,8 @@ export default function Navigation() {
             
             {/* 메뉴 패널 */}
             <motion.div className="absolute right-0 top-0 h-full w-72 bg-dark-300/95 backdrop-blur-lg shadow-2xl">
-              <div className="pt-20 p-6">
-                <div className="space-y-4">
+              <div className="pt-20 p-4">
+                <div className="space-y-1">
                   {navItems.map((item, index) => {
                     const Icon = item.icon
                     return (
@@ -269,19 +269,19 @@ export default function Navigation() {
                         key={item.href}
                         initial={{ x: 50, opacity: 0 }}
                         animate={{ x: 0, opacity: 1 }}
-                        transition={{ delay: index * 0.1 }}
+                        transition={{ delay: index * 0.05 }}
                       >
                         <Link
                           href={item.href}
                           onClick={() => setIsOpen(false)}
-                          className={`flex items-center space-x-3 p-3 rounded-lg transition-all duration-300 ${
+                          className={`flex items-center space-x-3 px-3 py-2 rounded-lg transition-all duration-300 ${
                             pathname === item.href 
                               ? 'bg-primary-500/20 border-2 border-primary-400 shadow-lg shadow-primary-500/30' 
                               : 'hover:bg-white/10 border-2 border-transparent'
                           }`}
                         >
-                          <Icon className={`w-5 h-5 ${pathname === item.href ? 'text-primary-300' : 'text-primary-400'}`} />
-                          <span className={`text-lg ${pathname === item.href ? 'font-bold text-primary-300' : ''}`}>{item.label}</span>
+                          <Icon className={`w-4 h-4 ${pathname === item.href ? 'text-primary-300' : 'text-primary-400'}`} />
+                          <span className={`text-base ${pathname === item.href ? 'font-bold text-primary-300' : ''}`}>{item.label}</span>
                         </Link>
                       </motion.div>
                     )

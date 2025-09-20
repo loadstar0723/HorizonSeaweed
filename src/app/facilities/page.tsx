@@ -764,7 +764,7 @@ export default function FacilitiesPage() {
                   className="glass-dark p-8 rounded-3xl mb-8"
                 >
                   <h3 className="text-3xl font-bold mb-6 text-center">
-                    <span className="gradient-text">스마트 김양식장 350평 1동 시설 비용</span>
+                    <span className="gradient-text">스마트 김양식장 450평 1동 시설 비용</span>
                   </h3>
                   <p className="text-xl text-gray-300 text-center max-w-3xl mx-auto">
                     국내 최고 수준의 특허 기술로 구현된 육상 김양식 사업의 
@@ -780,10 +780,10 @@ export default function FacilitiesPage() {
                   className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8"
                 >
                   {[
-                    { label: '연간 매출액', value: '4.32억', subtitle: '1동 350평 기준', icon: Calculator, color: 'from-blue-500 to-cyan-500' },
-                    { label: '월평균 매출', value: '3,600만원', subtitle: '1동 350평 기준', icon: TrendingUp, color: 'from-green-500 to-emerald-500' },
-                    { label: '10일 생산량', value: '4,000kg', subtitle: '1동 350평 기준', icon: PiggyBank, color: 'from-purple-500 to-pink-500' },
-                    { label: '시설 투자비용', value: '15억', subtitle: '1동 350평 기준', icon: BarChart3, color: 'from-orange-500 to-red-500' }
+                    { label: '일반김 연매출', value: '6.3억', subtitle: '50망 기준', icon: Calculator, color: 'from-blue-500 to-cyan-500' },
+                    { label: '곱창김 연매출', value: '16.2억', subtitle: '50망 기준', icon: TrendingUp, color: 'from-green-500 to-emerald-500' },
+                    { label: '월 생산량', value: '50망', subtitle: '1망 = 120kg', icon: PiggyBank, color: 'from-purple-500 to-pink-500' },
+                    { label: '시설 투자비용', value: '15억', subtitle: '1동 450평 기준', icon: BarChart3, color: 'from-orange-500 to-red-500' }
                   ].map((stat, idx) => (
                     <motion.div
                       key={idx}
@@ -819,7 +819,7 @@ export default function FacilitiesPage() {
                     <div className="space-y-4">
                       <div className="flex justify-between items-center py-3 border-b border-gray-700">
                         <span className="text-gray-400">건평 규모</span>
-                        <span className="font-semibold text-lg">350평 (1,157㎡)</span>
+                        <span className="font-semibold text-lg">450평 (1,488㎡)</span>
                       </div>
                       <div className="flex justify-between items-center py-3 border-b border-gray-700">
                         <span className="text-gray-400">재배망 규격</span>
@@ -827,7 +827,7 @@ export default function FacilitiesPage() {
                       </div>
                       <div className="flex justify-between items-center py-3 border-b border-gray-700">
                         <span className="text-gray-400">총 재배망 수</span>
-                        <span className="font-semibold text-lg">40망</span>
+                        <span className="font-semibold text-lg">50망</span>
                       </div>
                       <div className="flex justify-between items-center py-3 border-b border-gray-700">
                         <span className="text-gray-400">수조 배치</span>
@@ -892,7 +892,7 @@ export default function FacilitiesPage() {
                             <Zap className="w-5 h-5 text-yellow-400" />
                             <span>전기료</span>
                           </div>
-                          <span className="font-semibold">180~200만원</span>
+                          <span className="font-semibold">250만원</span>
                         </div>
                         <div className="w-full bg-gray-700 rounded-full h-2 overflow-hidden">
                           <div className="h-full bg-yellow-400 rounded-full" style={{ width: '25%' }}></div>
@@ -918,7 +918,7 @@ export default function FacilitiesPage() {
                             <Package className="w-5 h-5 text-green-400" />
                             <span>기타 운영비</span>
                           </div>
-                          <span className="font-semibold">100만원</span>
+                          <span className="font-semibold">350만원</span>
                         </div>
                         <div className="w-full bg-gray-700 rounded-full h-2 overflow-hidden">
                           <div className="h-full bg-green-400 rounded-full" style={{ width: '12%' }}></div>
@@ -928,7 +928,7 @@ export default function FacilitiesPage() {
                       <div className="mt-6 pt-6 border-t border-gray-700">
                         <div className="flex justify-between items-center">
                           <span className="text-lg font-semibold">총 운영비</span>
-                          <span className="text-2xl font-bold text-red-400">880~900만원</span>
+                          <span className="text-2xl font-bold text-red-400">1,200만원</span>
                         </div>
                       </div>
                     </div>
@@ -945,31 +945,46 @@ export default function FacilitiesPage() {
                       생산 및 수익 구조
                     </h4>
                     <div className="space-y-6">
-                      <div className="text-center p-6 bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-2xl border border-green-500/30">
-                        <p className="text-sm text-gray-400 mb-2">월간 총 생산량</p>
-                        <p className="text-4xl font-bold text-green-400">12,000kg</p>
-                        <p className="text-sm text-gray-500 mt-2">10일마다 4,000kg 수확 (월 3회)</p>
+                      <div className="text-center p-4 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-xl border border-blue-500/30">
+                        <p className="text-sm text-gray-400 mb-2">일반김 생산</p>
+                        <p className="text-3xl font-bold text-blue-400">월 5,250만원</p>
+                        <p className="text-sm text-gray-500 mt-1">50망 × 35만원 × 3회</p>
+                      </div>
+                      
+                      <div className="text-center p-4 bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-xl border border-green-500/30">
+                        <p className="text-sm text-gray-400 mb-2">곱창김 생산</p>
+                        <p className="text-3xl font-bold text-green-400">월 1.35억</p>
+                        <p className="text-sm text-gray-500 mt-1">50망 × 90만원 × 3회</p>
                       </div>
                       
                       <div className="grid grid-cols-2 gap-4">
                         <div className="p-4 bg-dark-300 rounded-xl text-center">
-                          <p className="text-sm text-gray-400 mb-2">10일 수확량</p>
-                          <p className="text-xl font-semibold">4,000kg</p>
-                          <p className="text-xs text-gray-500">40망 × 100kg</p>
+                          <p className="text-sm text-gray-400 mb-2">월 생산량</p>
+                          <p className="text-xl font-semibold">50망</p>
+                          <p className="text-xs text-gray-500">1망 = 120kg</p>
                         </div>
                         <div className="p-4 bg-dark-300 rounded-xl text-center">
-                          <p className="text-sm text-gray-400 mb-2">월 매출액</p>
-                          <p className="text-xl font-semibold text-green-400">3,600만원</p>
-                          <p className="text-xs text-gray-500">1,200만원 × 3회</p>
+                          <p className="text-sm text-gray-400 mb-2">월 수확횟수</p>
+                          <p className="text-xl font-semibold">3회</p>
+                          <p className="text-xs text-gray-500">10일 주기</p>
                         </div>
                       </div>
                       
                       <div className="p-4 bg-primary-500/10 border border-primary-500/30 rounded-xl">
-                        <div className="flex justify-between items-center">
-                          <span className="text-lg">월간 순수익</span>
-                          <span className="text-2xl font-bold gradient-text">2,700만원</span>
+                        <div className="mb-3">
+                          <div className="flex justify-between items-center">
+                            <span className="text-sm">일반김 월 순수익</span>
+                            <span className="text-xl font-bold text-blue-400">4,050만원</span>
+                          </div>
+                          <p className="text-xs text-gray-400 mt-1">원금회수 3.1년</p>
                         </div>
-                        <p className="text-xs text-gray-400 mt-2">※ 매출 3,600만원 - 운영비 900만원</p>
+                        <div className="border-t border-gray-700 pt-3">
+                          <div className="flex justify-between items-center">
+                            <span className="text-sm">곱창김 월 순수익</span>
+                            <span className="text-xl font-bold text-green-400">1.23억</span>
+                          </div>
+                          <p className="text-xs text-gray-400 mt-1">원금회수 1.0년</p>
+                        </div>
                       </div>
                     </div>
                   </motion.div>
@@ -1329,22 +1344,34 @@ export default function FacilitiesPage() {
                           <div className="text-sm w-20 text-right">5-7년</div>
                         </div>
                         <div className="flex items-center gap-4">
-                          <div className="w-24 text-sm font-bold text-primary-400">김양식</div>
+                          <div className="w-24 text-sm font-bold text-blue-400">일반김</div>
                           <div className="flex-1 bg-gray-700 rounded-full h-4 overflow-hidden">
                             <motion.div 
-                              className="h-full bg-gradient-to-r from-primary-400 to-cyan-400 rounded-full" 
-                              style={{ width: '30%' }}
-                              animate={{ width: ['30%', '35%', '30%'] }}
+                              className="h-full bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full" 
+                              style={{ width: '31%' }}
+                              animate={{ width: ['31%', '33%', '31%'] }}
                               transition={{ duration: 2, repeat: Infinity }}
                             ></motion.div>
                           </div>
-                          <div className="text-sm w-20 text-right font-bold text-primary-400">2.8-3.5년</div>
+                          <div className="text-sm w-20 text-right font-bold text-blue-400">3.1년</div>
+                        </div>
+                        <div className="flex items-center gap-4">
+                          <div className="w-24 text-sm font-bold text-green-400">곱창김</div>
+                          <div className="flex-1 bg-gray-700 rounded-full h-4 overflow-hidden">
+                            <motion.div 
+                              className="h-full bg-gradient-to-r from-green-400 to-emerald-400 rounded-full" 
+                              style={{ width: '10%' }}
+                              animate={{ width: ['10%', '12%', '10%'] }}
+                              transition={{ duration: 2, repeat: Infinity }}
+                            ></motion.div>
+                          </div>
+                          <div className="text-sm w-20 text-right font-bold text-green-400">1.0년</div>
                         </div>
                       </div>
                       <div className="mt-6 p-4 bg-primary-500/20 rounded-xl border border-primary-500/30">
                         <p className="text-center">
-                          <span className="text-2xl font-bold gradient-text">5배</span>
-                          <span className="text-sm text-gray-400 ml-2">더 빠른 투자 회수</span>
+                          <span className="text-2xl font-bold gradient-text">15배</span>
+                          <span className="text-sm text-gray-400 ml-2">더 빠른 투자 회수 (곱창김)</span>
                         </p>
                       </div>
                     </div>
@@ -1361,9 +1388,12 @@ export default function FacilitiesPage() {
                           <p className="text-xl font-bold">15억</p>
                         </div>
                         <div className="p-3 bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-xl text-center border border-green-500/30">
-                          <p className="text-sm text-gray-400">10년 후</p>
-                          <p className="text-xl font-bold text-green-400">750억+</p>
+                          <p className="text-sm text-gray-400">10년 후 (곱창김)</p>
+                          <p className="text-xl font-bold text-green-400">1,470억+</p>
                         </div>
+                      </div>
+                      <div className="mt-4 text-center">
+                        <p className="text-sm text-gray-400">곱창김 기준 연 14.76억 순수익 × 10년</p>
                       </div>
                     </div>
                   </div>
