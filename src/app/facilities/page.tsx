@@ -783,7 +783,7 @@ export default function FacilitiesPage() {
                     { label: '연간 매출액', value: '4.32억', subtitle: '1동 350평 기준', icon: Calculator, color: 'from-blue-500 to-cyan-500' },
                     { label: '월평균 매출', value: '3,600만원', subtitle: '1동 350평 기준', icon: TrendingUp, color: 'from-green-500 to-emerald-500' },
                     { label: '10일 생산량', value: '4,000kg', subtitle: '1동 350평 기준', icon: PiggyBank, color: 'from-purple-500 to-pink-500' },
-                    { label: '시장 목표', value: '1,000동', subtitle: '전국 확대 목표', icon: BarChart3, color: 'from-orange-500 to-red-500' }
+                    { label: '투자 비용', value: '15억', subtitle: '1동 350평 기준', icon: BarChart3, color: 'from-orange-500 to-red-500' }
                   ].map((stat, idx) => (
                     <motion.div
                       key={idx}
