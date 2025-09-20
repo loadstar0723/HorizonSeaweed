@@ -141,6 +141,10 @@
 html {
   @apply bg-dark-400 text-white;
   box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 *, *:before, *:after {
@@ -153,6 +157,9 @@ body {
   padding: 0;
   width: 100%;
   overflow-x: hidden;
+  zoom: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* 컨테이너 최대 너비 제한 */
@@ -161,6 +168,28 @@ body {
   max-width: 1280px !important;
   margin-left: auto;
   margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* 전체적인 스케일 조정 */
+@media (min-width: 1024px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1023px) {
+  html {
+    font-size: 14px;
+  }
 }
 
 /* 파티클 배경 */

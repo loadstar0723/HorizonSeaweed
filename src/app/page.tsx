@@ -155,7 +155,7 @@ export default function HomePage() {
       </AnimatePresence>
       
       {/* 히어로 섹션 */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden py-20">
         {/* 배경 애니메이션 */}
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-br from-dark-400 via-dark-300 to-primary-900/20" />
@@ -216,13 +216,13 @@ export default function HomePage() {
               </div>
             </motion.div>
 
-            <h1 className="text-5xl md:text-7xl font-bold mb-12 md:mb-16">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 md:mb-12">
               <span className="gradient-text">Horizon</span>
               <span className="gradient-text-gold">Seaweed</span>
             </h1>
             
-            <div className="mb-24 md:mb-32">
-              <p className="text-2xl md:text-3xl text-gray-300 mb-8">
+            <div className="mb-16 md:mb-20">
+              <p className="text-xl md:text-2xl text-gray-300 mb-6">
                 세계 최초 육상 스마트 김양식 지평선 김
               </p>
               
@@ -258,8 +258,8 @@ export default function HomePage() {
                   className="space-y-4"
                 >
                   {/* 첫 번째 문장 */}
-                  <p className="text-2xl md:text-3xl text-gray-300 leading-relaxed">
-                    <span className="gradient-text-gold font-bold text-3xl md:text-4xl">김제평야</span>의 드넓은 벼 곡창지대에서 시작된 <span className="text-primary-400 font-semibold">지평선 김의 혁신</span>
+                  <p className="text-xl md:text-2xl text-gray-300 leading-relaxed">
+                    <span className="gradient-text-gold font-bold text-2xl md:text-3xl">김제평야</span>의 드넓은 벼 곡창지대에서 시작된 <span className="text-primary-400 font-semibold">지평선 김의 혁신</span>
                   </p>
                   
                   {/* 구분선 */}
@@ -270,7 +270,7 @@ export default function HomePage() {
                   </div>
                   
                   {/* 두 번째 문장 - 강조 */}
-                  <p className="text-3xl md:text-5xl font-bold leading-tight">
+                  <p className="text-2xl md:text-4xl font-bold leading-tight">
                     <span className="gradient-text">바다가 없는 내륙에서도, 도시 한복판에서도</span>
                   </p>
                   
@@ -282,8 +282,8 @@ export default function HomePage() {
                   </div>
                   
                   {/* 세 번째 문장 */}
-                  <p className="text-2xl md:text-3xl text-gray-300 leading-relaxed">
-                    이제 <span className="text-primary-400 font-bold text-3xl md:text-4xl">전 세계 어디서나</span> 최고급 김을 생산할 수 있습니다
+                  <p className="text-xl md:text-2xl text-gray-300 leading-relaxed">
+                    이제 <span className="text-primary-400 font-bold text-2xl md:text-3xl">전 세계 어디서나</span> 최고급 김을 생산할 수 있습니다
                   </p>
                 </motion.div>
               </div>
