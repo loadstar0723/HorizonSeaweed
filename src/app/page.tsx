@@ -599,7 +599,7 @@ export default function HomePage() {
       <footer className="py-12 border-t border-white/10">
         <div className="container mx-auto px-4">
           <div className="text-center text-gray-400">
-            <p>&copy; 2025 HorizonSeaweed. All rights reserved. | 자동 배포 테스트 ✅</p>
+            <p>&copy; 2016 HorizonSeaweed. All rights reserved.</p>
           </div>
         </div>
       </footer>
