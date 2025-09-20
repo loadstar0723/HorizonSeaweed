@@ -155,7 +155,7 @@ export default function HomePage() {
       </AnimatePresence>
       
       {/* 히어로 섹션 */}
-      <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden py-20">
+      <section className="relative min-h-[75vh] flex items-center justify-center overflow-hidden py-16">
         {/* 배경 애니메이션 */}
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-br from-dark-400 via-dark-300 to-primary-900/20" />
@@ -169,7 +169,7 @@ export default function HomePage() {
               repeat: Infinity,
               ease: "linear"
             }}
-            className="absolute top-20 right-20 w-96 h-96 bg-primary-500/20 rounded-full blur-3xl"
+            className="absolute top-16 right-16 w-72 h-72 bg-primary-500/20 rounded-full blur-3xl"
           />
           <motion.div
             animate={{
@@ -181,7 +181,7 @@ export default function HomePage() {
               repeat: Infinity,
               ease: "linear"
             }}
-            className="absolute bottom-20 left-20 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl"
+            className="absolute bottom-16 left-16 w-72 h-72 bg-cyan-500/20 rounded-full blur-3xl"
           />
         </div>
 
@@ -212,7 +212,7 @@ export default function HomePage() {
                   }}
                   className="absolute inset-0 bg-gradient-to-r from-primary-500 to-cyan-500 rounded-full blur-xl opacity-50"
                 />
-                <Waves className="w-24 h-24 text-primary-400 relative z-10" />
+                <Waves className="w-20 h-20 text-primary-400 relative z-10" />
               </div>
             </motion.div>
 
