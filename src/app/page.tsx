@@ -155,7 +155,7 @@ export default function HomePage() {
       </AnimatePresence>
       
       {/* 히어로 섹션 */}
-      <section className="relative min-h-[75vh] md:min-h-[80vh] flex items-center justify-center overflow-hidden pt-40 pb-20 md:pt-32 md:pb-24">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
         {/* 배경 애니메이션 */}
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-br from-dark-400 via-dark-300 to-primary-900/20" />

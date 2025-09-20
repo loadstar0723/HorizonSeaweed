@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="ko" className="dark">
       <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
       <body className={`${inter.className} bg-dark-400 text-white overflow-x-hidden`}>
         <div className="particle-bg" />

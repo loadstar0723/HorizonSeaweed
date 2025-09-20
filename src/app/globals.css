@@ -165,7 +165,7 @@ body {
 /* 컨테이너 최대 너비 제한 */
 .container {
   width: 100%;
-  max-width: 858px !important; /* 1280px * 0.67 = 857.6px */
+  max-width: 1280px !important;
   margin-left: auto;
   margin-right: auto;
   padding-left: 1rem;
@@ -179,20 +179,20 @@ body {
   }
 }
 
-/* 전체적인 스케일 조정 - 67% 배율을 기본으로 */
+/* 전체적인 스케일 조정 - 100% 기본 크기 */
 html {
-  font-size: 10.72px; /* 16px * 0.67 = 10.72px */
+  font-size: 16px; /* 기본 16px = 100% */
 }
 
 @media (min-width: 1024px) {
   html {
-    font-size: 10.72px; /* 데스크톱에서도 67% 스케일 유지 */
+    font-size: 16px; /* 데스크톱 100% */
   }
 }
 
 @media (max-width: 1023px) {
   html {
-    font-size: 10px; /* 모바일에서는 조금 더 작게 */
+    font-size: 14px; /* 모바일 최적화 */
   }
 }
 
