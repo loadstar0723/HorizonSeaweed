@@ -85,7 +85,7 @@ export default function Navigation() {
       <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled ? 'bg-dark-400/95 backdrop-blur-lg shadow-lg' : 'bg-transparent'
       }`}>
-        <nav className="container mx-auto px-4 py-4">
+        <nav className="container mx-auto px-4 py-3 md:py-4">
           <div className="flex items-center justify-between">
             {/* 로고 */}
             <Link href="/" className="flex items-center space-x-3 group">

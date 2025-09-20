@@ -155,7 +155,7 @@ export default function HomePage() {
       </AnimatePresence>
       
       {/* 히어로 섹션 */}
-      <section className="relative min-h-[67vh] flex items-center justify-center overflow-hidden py-12">
+      <section className="relative min-h-[67vh] flex items-center justify-center overflow-hidden pt-40 pb-12 md:pt-24 md:pb-12">
         {/* 배경 애니메이션 */}
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-br from-dark-400 via-dark-300 to-primary-900/20" />
@@ -198,7 +198,7 @@ export default function HomePage() {
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               transition={{ type: "spring", duration: 1 }}
-              className="mb-8 inline-block"
+              className="mb-12 md:mb-8 inline-block"
             >
               <div className="relative">
                 <motion.div
@@ -216,7 +216,7 @@ export default function HomePage() {
               </div>
             </motion.div>
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 md:mb-12">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 md:mb-12 mt-4">
               <span className="gradient-text">Horizon</span>
               <span className="gradient-text-gold">Seaweed</span>
             </h1>
