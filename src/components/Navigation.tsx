@@ -34,6 +34,7 @@ const navItems = [
   { href: '/blockchain', label: '블록체인', icon: Coins },
   { href: '/team', label: '팀', icon: Users },
   { href: '/contact', label: '문의', icon: Phone },
+  { href: '/print', label: '인쇄', icon: FileText },
 ]
 
 const navGroups = [
@@ -61,6 +62,7 @@ const navGroups = [
       { href: '/company', label: '회사소개', icon: Building2 },
       { href: '/team', label: '팀', icon: Users },
       { href: '/contact', label: '문의', icon: Phone },
+      { href: '/print', label: '인쇄', icon: FileText },
     ]
   }
 ]

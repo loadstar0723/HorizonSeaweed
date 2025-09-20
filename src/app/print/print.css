@@ -1,0 +1,186 @@
+@media print {
+  /* 기본 인쇄 설정 */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* 페이지 설정 */
+  @page {
+    size: A4;
+    margin: 20mm;
+  }
+
+  /* 인쇄 시 숨김 */
+  .no-print {
+    display: none !important;
+  }
+
+  /* 인쇄 콘텐츠 스타일 */
+  .print-content {
+    font-size: 11pt;
+    line-height: 1.6;
+    color: #000 !important;
+    background: #fff !important;
+  }
+
+  /* 제목 스타일 */
+  h1 {
+    font-size: 24pt !important;
+    margin-bottom: 12pt !important;
+    color: #000 !important;
+  }
+
+  h2 {
+    font-size: 18pt !important;
+    margin-bottom: 10pt !important;
+    margin-top: 20pt !important;
+    color: #000 !important;
+    page-break-after: avoid;
+  }
+
+  h3 {
+    font-size: 14pt !important;
+    margin-bottom: 8pt !important;
+    margin-top: 12pt !important;
+    color: #000 !important;
+    page-break-after: avoid;
+  }
+
+  h4 {
+    font-size: 12pt !important;
+    margin-bottom: 6pt !important;
+    color: #000 !important;
+    page-break-after: avoid;
+  }
+
+  /* 단락 스타일 */
+  p {
+    margin-bottom: 8pt !important;
+    text-align: justify;
+    color: #000 !important;
+  }
+
+  /* 리스트 스타일 */
+  ul, ol {
+    margin-bottom: 8pt !important;
+    color: #000 !important;
+  }
+
+  li {
+    margin-bottom: 4pt !important;
+    color: #000 !important;
+  }
+
+  /* 테이블 스타일 */
+  table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    margin-bottom: 12pt !important;
+    page-break-inside: avoid;
+  }
+
+  th, td {
+    border: 1px solid #000 !important;
+    padding: 6pt !important;
+    color: #000 !important;
+  }
+
+  th {
+    background-color: #f5f5f5 !important;
+    font-weight: bold !important;
+  }
+
+  /* 박스 스타일 */
+  .border {
+    border: 1px solid #000 !important;
+  }
+
+  /* 페이지 나누기 */
+  .page-break-after {
+    page-break-after: always;
+  }
+
+  .page-break-before {
+    page-break-before: always;
+  }
+
+  .page-break-avoid {
+    page-break-inside: avoid;
+  }
+
+  /* 아이콘 숨김 */
+  svg {
+    display: none !important;
+  }
+
+  /* 배경색 제거 */
+  .bg-gray-100 {
+    background-color: #f5f5f5 !important;
+  }
+
+  /* 링크 스타일 */
+  a {
+    text-decoration: none !important;
+    color: #000 !important;
+  }
+
+  /* 그리드 레이아웃 조정 */
+  .grid {
+    display: grid !important;
+  }
+
+  .grid-cols-2 {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 12pt !important;
+  }
+
+  /* 섹션 간격 */
+  section {
+    margin-bottom: 0 !important;
+  }
+
+  /* 전체 높이 페이지 */
+  .h-screen {
+    height: 100vh !important;
+  }
+
+  /* 플렉스 박스 */
+  .flex {
+    display: flex !important;
+  }
+
+  .items-center {
+    align-items: center !important;
+  }
+
+  .justify-center {
+    justify-content: center !important;
+  }
+
+  .flex-col {
+    flex-direction: column !important;
+  }
+
+  /* 여백 조정 */
+  .p-12 {
+    padding: 0 !important;
+  }
+
+  .mb-8 {
+    margin-bottom: 12pt !important;
+  }
+
+  .mb-6 {
+    margin-bottom: 10pt !important;
+  }
+
+  .mb-4 {
+    margin-bottom: 8pt !important;
+  }
+
+  /* Navigation 등 UI 요소 숨김 */
+  header, nav, footer {
+    display: none !important;
+  }
+}
