@@ -290,25 +290,25 @@ export default function HomePage() {
             </motion.div>
 
             {/* CTA 버튼 */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-20 md:mb-24">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-20 md:mb-24">
               <motion.button
                 onClick={() => setSelectedVideo('/videos/smart-farming-main.mp4')}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="group px-8 py-4 bg-gradient-to-r from-red-500 to-pink-500 rounded-full font-semibold text-white shadow-lg hover:shadow-red-500/25 transition-all duration-300 flex items-center justify-center"
+                className="group px-8 py-4 bg-gradient-to-r from-red-500 to-pink-500 rounded-full font-semibold text-white shadow-lg hover:shadow-red-500/25 transition-all duration-300 inline-flex items-center whitespace-nowrap"
               >
-                <PlayCircle className="w-6 h-6 mr-2 group-hover:animate-pulse" />
-                육상 김양식 영상 보기
+                <PlayCircle className="w-6 h-6 mr-2 flex-shrink-0 group-hover:animate-pulse" />
+                <span className="flex-shrink-0">육상 김양식 영상 보기</span>
               </motion.button>
               
-              <Link href="/3d-smartfarm">
+              <Link href="/3d-smartfarm" className="inline-block">
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="group px-8 py-4 bg-gradient-to-r from-primary-500 to-cyan-500 rounded-full font-semibold text-white shadow-lg hover:shadow-primary-500/25 transition-all duration-300"
+                  className="group px-8 py-4 bg-gradient-to-r from-primary-500 to-cyan-500 rounded-full font-semibold text-white shadow-lg hover:shadow-primary-500/25 transition-all duration-300 inline-flex items-center whitespace-nowrap"
                 >
-                  3D 스마트팜 보기
-                  <ArrowRight className="inline ml-2 group-hover:translate-x-1 transition-transform" />
+                  <span className="flex-shrink-0">3D 스마트팜 보기</span>
+                  <ArrowRight className="w-6 h-6 ml-2 flex-shrink-0 group-hover:translate-x-1 transition-transform" />
                 </motion.button>
               </Link>
             </div>
