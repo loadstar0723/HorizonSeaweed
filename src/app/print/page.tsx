@@ -1605,7 +1605,7 @@ export default function PrintPage() {
                   </div>
                 </div>
                 <p className="text-sm text-center font-semibold italic">
-                  "HorizonSeaweed의 기술은 전통 김양식 산업의 패러다임을 완전히 바꿨습니다"
+                  &quot;HorizonSeaweed의 기술은 전통 김양식 산업의 패러다임을 완전히 바꿨습니다&quot;
                 </p>
               </div>
             </div>
