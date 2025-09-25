@@ -27,6 +27,7 @@ import {
 } from 'lucide-react'
 import Navigation from '@/components/Navigation'
 import ScrollToTop from '@/components/ScrollToTop'
+import Footer from '@/components/Footer'
 
 const features = [
   {
@@ -573,14 +574,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 푸터 */}
-      <footer className="py-12 border-t border-white/10">
-        <div className="container mx-auto px-4">
-          <div className="text-center text-gray-400">
-            <p>&copy; 2016 HorizonSeaweed. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
       <ScrollToTop />
     </>
   )
